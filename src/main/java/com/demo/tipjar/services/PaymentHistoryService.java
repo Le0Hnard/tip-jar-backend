@@ -10,4 +10,6 @@ public interface PaymentHistoryService {
 
     List<PaymentHistory> getAllPaymentHistories();
 
+    PaymentHistory getLatestPayment();
+
 }

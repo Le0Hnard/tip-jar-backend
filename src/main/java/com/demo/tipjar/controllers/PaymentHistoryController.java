@@ -23,4 +23,9 @@ public class PaymentHistoryController {
         return this.paymentHistoryService.getAllPaymentHistories();
     }
 
+    @RequestMapping(value = "/getLatestPayment", method = RequestMethod.POST)
+    public PaymentHistory getLatestPayment() {
+        return this.paymentHistoryService.getLatestPayment();
+    }
+
 }

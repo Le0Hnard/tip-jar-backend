@@ -30,4 +30,9 @@ public class PaymentHistoryServiceImpl implements PaymentHistoryService {
         return (List<PaymentHistory>) this.paymentHistoryRepository.findAll();
     }
 
+    @Override
+    public PaymentHistory getLatestPayment() {
+        return this.paymentHistoryRepository.findAllByOrderByIdDesc().get(0);
+    }
+
 }
