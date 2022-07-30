@@ -10,19 +10,19 @@ public class PaymentHistory {
     @Column(name = "history_id")
     private Long id;
 
-    @Column(name = "amount", nullable = false)
+    @Column(name = "amount")
     private double amount;
 
-    @Column(name = "num_of_people", nullable = false)
+    @Column(name = "num_of_people")
     private int numOfPeople;
 
-    @Column(name = "tip_percentage", nullable = false)
+    @Column(name = "tip_percentage")
     private double tipPercentage;
 
-    @Column(name = "total_tip", nullable = false)
+    @Column(name = "total_tip")
     private double totalTip;
 
-    @Column(name = "tip_per_person", nullable = false)
+    @Column(name = "tip_per_person")
     private double tipPerPerson;
 
     public PaymentHistory(double amount, int numOfPeople, double tipPercentage, double totalTip, double tipPerPerson) {
