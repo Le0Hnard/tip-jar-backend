@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface PaymentHistoryRepository extends JpaRepository<PaymentHistory, Long> {
 
-    List<PaymentHistory> findAllByOrderByIdDesc();
+    List<PaymentHistory> findAllByOrderByIdDesc(); // can use findFirstByOrderByIdDesc();
 
 }
