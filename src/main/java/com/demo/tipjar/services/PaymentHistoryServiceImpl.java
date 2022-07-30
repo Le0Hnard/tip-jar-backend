@@ -14,8 +14,8 @@ public class PaymentHistoryServiceImpl implements PaymentHistoryService {
     @Override
     public PaymentHistory savePaymentHistory(PaymentHistory paymentHistory) {
         double tipPercentage = paymentHistory.getTipPercentage() / 100.0;
-        double totalTip = tipPercentage * paymentHistory.getAmount();
-        double tipPerPerson = totalTip / paymentHistory.getNumOfPeople();
+        double totalTip = Math.round((tipPercentage * paymentHistory.getAmount()) * 100.00) / 100.00;
+        double tipPerPerson = Math.round((totalTip / paymentHistory.getNumOfPeople()) * 100.00) / 100.00;
 
         paymentHistory.setTotalTip(totalTip);
         paymentHistory.setTipPerPerson(tipPerPerson);
