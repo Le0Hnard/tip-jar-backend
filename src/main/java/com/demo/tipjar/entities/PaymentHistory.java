@@ -25,6 +25,10 @@ public class PaymentHistory {
     @Column(name = "tip_per_person")
     private double tipPerPerson;
 
+    public PaymentHistory() {
+
+    }
+
     public PaymentHistory(double amount, int numOfPeople, double tipPercentage, double totalTip, double tipPerPerson) {
         this.amount = amount;
         this.numOfPeople = numOfPeople;

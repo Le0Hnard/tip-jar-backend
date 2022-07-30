@@ -5,6 +5,8 @@ import com.demo.tipjar.repositories.PaymentHistoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PaymentHistoryServiceImpl implements PaymentHistoryService {
 
@@ -21,6 +23,11 @@ public class PaymentHistoryServiceImpl implements PaymentHistoryService {
         paymentHistory.setTipPerPerson(tipPerPerson);
 
         return this.paymentHistoryRepository.save(paymentHistory);
+    }
+
+    @Override
+    public List<PaymentHistory> getAllPaymentHistories() {
+        return (List<PaymentHistory>) this.paymentHistoryRepository.findAll();
     }
 
 }
